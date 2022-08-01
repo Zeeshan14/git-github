@@ -8,11 +8,11 @@
       become: true
       copy:
         src: ~/Documents/nginx.tar
-        dest: /home/zeeshan/Documents/destination
+        dest: /home/ubuntu/
         mode: 0777
     - name: loading docker image
       become: true
-      command: docker load -i /home/zeeshan/Documents/destination/nginx.tar 
+      command: docker load -i /home/ubuntu/nginx.tar 
     - name: running docker image
       become: true
       command: docker run -d nginx
